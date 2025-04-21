@@ -24,6 +24,9 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+yolo11n.pt
+yolo8n.pt
+yolo8m.pt
 MANIFEST
 
 # PyInstaller
@@ -172,3 +175,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+*.pt
+runs/
+dataset/labels/train.cache
+dataset/labels/val.cache

@@ -1,0 +1,74 @@
+<annotation>
+	<folder>correct</folder>
+	<filename>1.png</filename>
+	<path>E:\windows_v1.8.1\dataset\correct\1.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1247</width>
+		<height>1760</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Общая шероховатость</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>802</xmin>
+			<ymin>43</ymin>
+			<xmax>1181</xmax>
+			<ymax>163</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Технические требования</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>137</xmin>
+			<ymin>1250</ymin>
+			<xmax>1081</xmax>
+			<ymax>1380</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Линейный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>504</xmin>
+			<ymin>1162</ymin>
+			<xmax>839</xmax>
+			<ymax>1245</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Линейный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>250</xmin>
+			<ymin>1172</ymin>
+			<xmax>408</xmax>
+			<ymax>1242</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Линейный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>163</xmin>
+			<ymin>295</ymin>
+			<xmax>242</xmax>
+			<ymax>1134</ymax>
+		</bndbox>
+	</object>
+</annotation>
