@@ -179,3 +179,10 @@ cython_debug/
 runs/
 dataset/labels/train.cache
 dataset/labels/val.cache
+detected/1.png
+detected/6.png
+detected/7.png
+detected/8.png
+detected/9.png
+detected/10.png
+detected/11.png
