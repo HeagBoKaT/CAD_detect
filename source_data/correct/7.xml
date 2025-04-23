@@ -323,4 +323,28 @@
 			<ymax>370</ymax>
 		</bndbox>
 	</object>
+	<object>
+		<name>Фаска</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>986</xmin>
+			<ymin>1448</ymin>
+			<xmax>1228</xmax>
+			<ymax>1561</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Фаска</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>989</xmin>
+			<ymin>1452</ymin>
+			<xmax>1230</xmax>
+			<ymax>1520</ymax>
+		</bndbox>
+	</object>
 </annotation>

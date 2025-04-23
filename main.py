@@ -20,14 +20,14 @@ console = Console()
 
 # --- Configuration ---
 DEFAULT_DATA_CONFIG = "dataset/data.yaml"
-DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run/weights/best.pt"
-DEFAULT_EPOCHS = 500
+DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run2/weights/best.pt"
+DEFAULT_EPOCHS = 1000
 DEFAULT_IMG_SIZE = 1600
 DEFAULT_BATCH_SIZE = 4
 DEFAULT_RUN_NAME = "drawing_detection_run"
 DEFAULT_PROJECT_NAME = "runs/train"
 DEFAULT_PREDICTION_SOURCE = "test"  # Updated to point to the test folder
-DEFAULT_PREDICTION_CONF = 0.1
+DEFAULT_PREDICTION_CONF = 0.3
 DEFAULT_SAVE_PERIOD = 10
 DEFAULT_MAX_DET = 100
 DEFAULT_IOU = 0.5
@@ -43,7 +43,8 @@ class_mapping = {
     "Диаметральный размер": 3,
     "Таблица параметров": 4,
     "Угловой размер": 5,
-    "Шероховатость": 6
+    "Шероховатость": 6,
+    "Фаска": 7
 }
 
 # Colors for class visualization (expanded to 11 colors)
