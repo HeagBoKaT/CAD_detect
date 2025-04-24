@@ -1,0 +1,5 @@
+ultralytics
+rich
+pillow
+opencv-python
+numpy

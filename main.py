@@ -20,15 +20,17 @@ console = Console()
 
 # --- Configuration ---
 DEFAULT_DATA_CONFIG = "dataset/data.yaml"
-DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run2/weights/best.pt"
-DEFAULT_EPOCHS = 1000
-DEFAULT_IMG_SIZE = 1600
+DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run/weights/best.pt"
+DEFAULT_EPOCHS = 10000
+DEFAULT_PATIENCE = 0
+DEFAULT_WORKERS = 8
+DEFAULT_IMG_SIZE = 1440
 DEFAULT_BATCH_SIZE = 4
 DEFAULT_RUN_NAME = "drawing_detection_run"
 DEFAULT_PROJECT_NAME = "runs/train"
 DEFAULT_PREDICTION_SOURCE = "test"  # Updated to point to the test folder
 DEFAULT_PREDICTION_CONF = 0.3
-DEFAULT_SAVE_PERIOD = 10
+DEFAULT_SAVE_PERIOD = 500
 DEFAULT_MAX_DET = 100
 DEFAULT_IOU = 0.5
 DEFAULT_XML_DIR = "source_data/correct/"
@@ -44,22 +46,28 @@ class_mapping = {
     "Таблица параметров": 4,
     "Угловой размер": 5,
     "Шероховатость": 6,
-    "Фаска": 7
+    "Фаска": 7,
+    "Допуск": 8
 }
 
-# Colors for class visualization (expanded to 11 colors)
+# Colors for class visualization (bright and contrasting on white background)
 colors = [
-    (0, 0, 128),    # Dark blue
-    (0, 128, 0),    # Dark green
-    (128, 0, 0),    # Dark red
-    (128, 0, 128),  # Dark purple
-    (139, 69, 19),  # Dark brown
-    (64, 64, 64),   # Dark gray
-    (0, 128, 128),  # Teal
-    (255, 165, 0),  # Orange
-    (128, 128, 0),  # Olive
-    (255, 20, 147), # Deep pink
-    (70, 130, 180)  # Steel blue
+    (200, 0, 0),    # Тёмно-красный
+    (0, 200, 0),    # Тёмно-зелёный
+    (0, 0, 200),    # Тёмно-синий
+    (255, 140, 0),  # Тёмно-оранжевый
+    (200, 0, 200),  # Тёмно-маджента
+    (0, 128, 128),  # Тёмно-бирюзовый
+    (153, 76, 0),   # Коричнево-оранжевый
+    (102, 0, 204),  # Тёмно-пурпурный
+    (0, 102, 204),  # Тёмно-голубой
+    (204, 0, 102),  # Тёмно-розовый
+    (0, 153, 76),   # Тёмно-изумрудный
+    (102, 51, 0),   # Тёмно-коричневый
+    (153, 0, 153),  # Глубокий фиолетовый
+    (0, 153, 204),  # Ярко-бирюзовый
+    (204, 102, 0),  # Янтарный
+    (76, 76, 76)    # Тёмно-серый
 ]
 
 # Load font for PIL with Cyrillic support
@@ -243,6 +251,8 @@ def train_model(args):
                 save=True,
                 save_period=args.save_period,
                 exist_ok=args.exist_ok,
+                patience = DEFAULT_PATIENCE,
+                workers=DEFAULT_WORKERS,
             )
             progress.advance(task, advance=args.epochs)
         except Exception as e:
@@ -332,8 +342,6 @@ def predict_image(args):
 
                     label = f"{class_name} {conf:.2f}"
                     label = label.encode("utf-8").decode("utf-8")
-                    text_bbox = draw.textbbox((x1, y1 - 30), label, font=font)
-                    draw.rectangle(text_bbox, fill=(128, 128, 128))  # Gray background
                     draw.text((x1, y1 - 30), label, fill=color, font=font)
 
                 img_result = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
