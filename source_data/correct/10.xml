@@ -323,4 +323,16 @@
 			<ymax>1056</ymax>
 		</bndbox>
 	</object>
+	<object>
+		<name>Линейный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>297</xmin>
+			<ymin>393</ymin>
+			<xmax>347</xmax>
+			<ymax>683</ymax>
+		</bndbox>
+	</object>
 </annotation>

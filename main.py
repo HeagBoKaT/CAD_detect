@@ -20,7 +20,7 @@ console = Console()
 
 # --- Configuration ---
 DEFAULT_DATA_CONFIG = "dataset/data.yaml"
-DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run2/weights/best.pt"
+DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run/weights/best.pt"
 DEFAULT_EPOCHS = 100
 DEFAULT_PATIENCE = 0
 DEFAULT_WORKERS = 8
@@ -47,7 +47,8 @@ class_mapping = {
     "Угловой размер": 5,
     "Шероховатость": 6,
     "Фаска": 7,
-    "Допуск": 8
+    "Допуск": 8,
+    "Номинальный размер": 9
 }
 
 # Colors for class visualization (bright and contrasting on white background)
@@ -66,13 +67,12 @@ colors = [
     (102, 51, 0),   # Тёмно-коричневый
     (153, 0, 153),  # Глубокий фиолетовый
     (0, 153, 204),  # Ярко-бирюзовый
-    (204, 102, 0),  # Янтарный
-    (76, 76, 76)    # Тёмно-серый
+    (204, 102, 0)  # Янтарный
 ]
 
 # Load font for PIL with Cyrillic support
 try:
-    font_path = "/usr/share/fonts/truetype/dejavu-sans-fonts/DejaVuSans.ttf"
+    font_path = "/usr/share/fonts/Handjet-Regular.ttf"
     font = ImageFont.truetype(font_path, size=20)
 except Exception as e:
     console.print(f"[red]Ошибка загрузки шрифта: {e}[/red]")
@@ -81,7 +81,7 @@ except Exception as e:
 
 # --- Argument Parsing ---
 def parse_args():
-    parser = argparse.ArgumentParser(description="YOLOv8 Application with Rich Interface")
+    parser = argparse.ArgumentParser(description="CAD detect")
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL_TO_TRAIN, help=f"Path to model (.pt or .yaml). Default: {DEFAULT_MODEL_TO_TRAIN}")
     parser.add_argument("--data", type=str, default=DEFAULT_DATA_CONFIG, help=f"Path to dataset config (data.yaml). Default: {DEFAULT_DATA_CONFIG}")
     parser.add_argument("--epochs", type=int, default=DEFAULT_EPOCHS, help=f"Number of training epochs. Default: {DEFAULT_EPOCHS}")

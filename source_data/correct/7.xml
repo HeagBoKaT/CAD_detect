@@ -101,18 +101,6 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>366</xmin>
-			<ymin>654</ymin>
-			<xmax>437</xmax>
-			<ymax>1922</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>Диаметральный размер</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
 			<xmin>437</xmin>
 			<ymin>887</ymin>
 			<xmax>497</xmax>
@@ -381,6 +369,18 @@
 			<ymin>366</ymin>
 			<xmax>2460</xmax>
 			<ymax>421</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>372</xmin>
+			<ymin>664</ymin>
+			<xmax>438</xmax>
+			<ymax>1914</ymax>
 		</bndbox>
 	</object>
 </annotation>

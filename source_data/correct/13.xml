@@ -59,4 +59,64 @@
 			<ymax>1239</ymax>
 		</bndbox>
 	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>555</xmin>
+			<ymin>1239</ymin>
+			<xmax>895</xmax>
+			<ymax>1312</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>437</xmin>
+			<ymin>1236</ymin>
+			<xmax>597</xmax>
+			<ymax>1315</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>426</xmin>
+			<ymin>789</ymin>
+			<xmax>491</xmax>
+			<ymax>1207</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>426</xmin>
+			<ymin>366</ymin>
+			<xmax>491</xmax>
+			<ymax>801</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Номинальный размер</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>424</xmin>
+			<ymin>262</ymin>
+			<xmax>488</xmax>
+			<ymax>412</ymax>
+		</bndbox>
+	</object>
 </annotation>
