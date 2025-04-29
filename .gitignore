@@ -175,7 +175,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-*.pt
 runs/
 dataset/labels/train.cache
 dataset/labels/val.cache

@@ -20,16 +20,16 @@ console = Console()
 
 # --- Configuration ---
 DEFAULT_DATA_CONFIG = "dataset/data.yaml"
-DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run/weights/best.pt"
-DEFAULT_EPOCHS = 10000
+DEFAULT_MODEL_TO_TRAIN = "runs/train/drawing_detection_run2/weights/best.pt"
+DEFAULT_EPOCHS = 100
 DEFAULT_PATIENCE = 0
 DEFAULT_WORKERS = 8
-DEFAULT_IMG_SIZE = 1440
+DEFAULT_IMG_SIZE = 1600
 DEFAULT_BATCH_SIZE = 4
 DEFAULT_RUN_NAME = "drawing_detection_run"
 DEFAULT_PROJECT_NAME = "runs/train"
 DEFAULT_PREDICTION_SOURCE = "test"  # Updated to point to the test folder
-DEFAULT_PREDICTION_CONF = 0.3
+DEFAULT_PREDICTION_CONF = 0.5
 DEFAULT_SAVE_PERIOD = 500
 DEFAULT_MAX_DET = 100
 DEFAULT_IOU = 0.5
@@ -72,7 +72,7 @@ colors = [
 
 # Load font for PIL with Cyrillic support
 try:
-    font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    font_path = "/usr/share/fonts/truetype/dejavu-sans-fonts/DejaVuSans.ttf"
     font = ImageFont.truetype(font_path, size=20)
 except Exception as e:
     console.print(f"[red]Ошибка загрузки шрифта: {e}[/red]")

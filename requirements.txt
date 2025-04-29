@@ -1,5 +1,7 @@
+torch
+torchvision
 ultralytics
-rich
-pillow
 opencv-python
+pillow
 numpy
+rich
